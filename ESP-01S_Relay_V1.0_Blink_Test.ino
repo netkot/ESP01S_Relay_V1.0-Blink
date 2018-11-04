@@ -16,21 +16,23 @@
  
 */
 
-int i = 1;
+int internal_led = 1; // internal ESP-01S led
+int relay_pin    = 0; // Relay pin
 int delay_sec = 1000;
 
 
 void setup() {
-  pinMode(i, OUTPUT);
-  pinMode(0, OUTPUT);
+  pinMode(internal_led, OUTPUT);
+  pinMode(relay_pin, OUTPUT);
 }
 
 // the loop function runs over and over again forever
 void loop() {
-  digitalWrite (i, HIGH);
-  digitalWrite (0, HIGH);
+  digitalWrite (internal_led, HIGH);
+  digitalWrite (relay_pin , LOW); // inverted logic    
   delay (delay_sec);
-  digitalWrite (i, LOW);
-  digitalWrite (0, LOW);
+    
+  digitalWrite (internal_led, LOW);
+  digitalWrite (relay_pin , HIGH);    
   delay (delay_sec);
 }
