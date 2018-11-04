@@ -1,5 +1,4 @@
-# ESP01S_Relay_V1.0-Blink
-ESP-01S Relay V1.0 Blink Test
+# ESP-01S Relay V1.0 Fix
 
 China ESP-01S Relay V1.0 module fix and Blink Sample
 
